@@ -34,20 +34,14 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('kategori/tanaman_hias') ?>">
+        <a class="nav-link" href="<?php echo base_url('kategori/tanaman_hias_outdoor') ?>">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tanaman Hias</span></a>
+          <span>Tanaman Hias Outdoor</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('kategori/tanaman_buah') ?>">
+        <a class="nav-link" href="<?php echo base_url('kategori/tanaman_hias_indoor') ?>">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tanaman Buah</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('kategori/tanaman_herbal') ?>">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tanaman Herbal</span></a>
-      </li>
+          <span>Tanaman Hias Indoor</span></a>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('blogspot/index') ?>">
           <i class="fas fa-fw fa-table"></i>

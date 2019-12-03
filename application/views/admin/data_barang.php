@@ -62,7 +62,7 @@
                 <input type="text" name="keterangan" class="form-control">
             </div>
             <div class="form-group">
-                <label>Kategori</label>
+                <label>Kategori</label><h6>*(Tanaman Hias Outdoor / Indoor)</h6>
                 <input type="text" name="kategori" class="form-control">
             </div>
             <div class="form-group">
