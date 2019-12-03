@@ -51,9 +51,13 @@
                 <label>Nama Artikel</label>
                 <input type="text" name="nama_deskripsi" class="form-control">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Artikel</label>
                 <input type="text" name="deskripsi" class="form-control">
+            </div> -->
+            <div class="form-group">
+                <label for="">Isi Artikel</label>
+                <textarea class="form-control" name="deskripsi" id="" style="height:200px"></textarea>
             </div>
             <div class="form-group">
                 <label>Gambar Produk</label><br>
