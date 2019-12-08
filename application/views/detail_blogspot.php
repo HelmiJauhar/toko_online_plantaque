@@ -17,11 +17,17 @@
         </tr>
         <td>Keterangan</td>
         <td><strong><?php echo $blog->deskripsi ?></strong></td>
+        <tr>
+        <td>Video</td>
+        <td><strong>
+        <?php echo youtube_embed($blog->video_url); ?>
+        </strong></td>
+        </tr>
         </table>
         </div>
         
     </div>
-  <?php endforeach;?>
+  <?php endforeach; ?>
   </div>
 </div>
 </div>

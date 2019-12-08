@@ -6,6 +6,7 @@ class data_blogspot extends CI_Controller{
         $data['blogspot'] = $this->model_blogspot->tampil_data()->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
+        $this->load->helper('video');
         $this->load->view('admin/data_blogspot', $data);
         $this->load->view('templates_admin/footer');
     }
@@ -25,11 +26,13 @@ class data_blogspot extends CI_Controller{
                 $gambar = $this->upload->data('file_name');
             }
         }
+        $video_url = $this->input->post('video_url');
 
         $data = array(
             'nama_deskripsi'    => $nama_deskripsi,
             'deskripsi'         => $deskripsi,
-            'gambar'            => $gambar
+            'gambar'            => $gambar,
+            'video_url'         => $video_url
         );
 
         $this->model_blogspot->tambah_blogspot($data, 'tb_blogspot');
@@ -48,19 +51,21 @@ class data_blogspot extends CI_Controller{
     }
     public function update()
     {
-        $id_deskripsi             = $this->input->post('id_deskripsi');
-        $nama_deskripsi    = $this->input->post('nama_deskripsi');
-        $deskripsi     = $this->input->post('deskripsi');
+        $id_deskripsi               = $this->input->post('id_deskripsi');
+        $nama_deskripsi             = $this->input->post('nama_deskripsi');
+        $deskripsi                  = $this->input->post('deskripsi');
+        $video_url                  = $this->input->post('video_url');
 
         $data = array(
             'nama_deskripsi'    => $nama_deskripsi,
             'deskripsi'         => $deskripsi,
+            'video_url'         => $video_url
         );
 
         $where = array(
             'id_deskripsi' => $id_deskripsi
         );
-        $this->model_blogspot->update_data($where,$data,'tb_deskripsi');
+        $this->model_blogspot->update_data($where,$data,'tb_blogspot');
         redirect('admin/data_blogspot/index');
 
     }

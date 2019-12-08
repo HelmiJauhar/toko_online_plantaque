@@ -138,7 +138,7 @@ return array(
 	'mp4'   =>	'video/mp4',
 	'm4a'   =>	'audio/x-m4a',
 	'f4v'   =>	array('video/mp4', 'video/x-f4v'),
-	'flv'	=>	'video/x-flv',
+	'flv'	=>	array('video/x-flv', 'flv-application/octet-stream', 'application/octet-stream'),
 	'webm'	=>	'video/webm',
 	'aac'   =>	array('audio/x-aac', 'audio/aac'),
 	'm4u'   =>	'application/vnd.mpegurl',
