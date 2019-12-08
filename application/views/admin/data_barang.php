@@ -7,7 +7,8 @@
             <th>NO</th>
             <th>NAMA BARANG</th>
             <th>KETERANGAN</th>
-            <th>KATEGORI</th>
+            <th>NAMA PENJUAL</th>
+            <th>LOKASI</th>
             <th>HARGA</th>
             <th>GAMBAR</th>
             <th>STOK</th>
@@ -22,6 +23,8 @@
             <td><?php echo $no++ ?></td>
             <td><?php echo $brg->nama_barang ?></td>
             <td><?php echo substr($brg->keterangan,0,30) ?>...</td>
+            <td><?php echo $brg->nama_penjual ?></td>
+            <td><?php echo $brg->lokasi ?></td>
             <td><?php echo $brg->kategori ?></td>
             <td><?php echo $brg->harga ?></td>
             <td>
@@ -58,12 +61,20 @@
                 <input type="text" name="nama_barang" class="form-control">
             </div>
             <div class="form-group">
-                <label>keterangan</label>
+                <label>Keterangan</label>
                 <input type="text" name="keterangan" class="form-control">
             </div>
             <div class="form-group">
                 <label>Kategori</label><h6>*(Tanaman Hias Outdoor / Indoor)</h6>
                 <input type="text" name="kategori" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nama Penjual</label>
+                <input type="text" name="nama_penjual" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Lokasi</label>
+                <input type="text" name="lokasi" class="form-control">
             </div>
             <div class="form-group">
                 <label>Harga</label>

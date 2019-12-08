@@ -18,6 +18,14 @@
         <td>Kategori</td>
         <td><strong><?php echo $brg->kategori ?></strong></td>
         <tr>
+        <tr>
+        <td>Nama Penjual</td>
+        <td><strong><?php echo $brg->nama_penjual ?></strong></td>
+        </tr>
+        <tr>
+        <td>Lokasi</td>
+        <td><strong><?php echo $brg->lokasi ?></strong></td>
+        </tr>
         <td>Harga</td>
         <td><strong><div><?php echo $brg->harga ?></div></strong></td>
          <tr>

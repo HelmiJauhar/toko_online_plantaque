@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2019 at 07:32 AM
+-- Generation Time: Dec 08, 2019 at 06:17 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -35,18 +35,17 @@ CREATE TABLE `tb_barang` (
   `kategori` varchar(60) NOT NULL,
   `harga` int(11) NOT NULL,
   `stok` int(11) NOT NULL,
-  `gambar` text NOT NULL
+  `gambar` text NOT NULL,
+  `nama_penjual` varchar(100) NOT NULL,
+  `lokasi` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_barang`
 --
 
-INSERT INTO `tb_barang` (`id_barang`, `nama_barang`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`) VALUES
-(7, 'Tanaman Anggrek Malang', 'Anggrek khas malang asli tanam dari awal', 'Tanaman Hias Indoor', 20000, 18, 'anggrek51.jpg'),
-(8, 'Bibit Pohon Cemara', 'Jual bibit pohon cemara untuk ditanam menjadi tanaman hias outdoor', 'Tanaman Hias Outdoor', 50000, 10, '4005313_9350c6bf-9029-4b3f-9998-6e4de9ec56c0.jpg'),
-(9, 'Jual tanaman bambu air', 'asli malang ', 'Tanaman hias outdoor', 35000, 30, 'bambu-air-3.jpg'),
-(10, 'Jual gelombang cinta', 'asli malang', 'Tanaman Hias Indoor', 40000, 34, 'gelombang-cinta.jpg');
+INSERT INTO `tb_barang` (`id_barang`, `nama_barang`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`, `nama_penjual`, `lokasi`) VALUES
+(11, 'Tanaman Anggrek Malang', 'Anggrek khas malang asli tanam dari awal', 'Tanaman Hias Outdoor', 10000, 10, 'anggrek11.jpg', 'Helmi', 'Malang');
 
 -- --------------------------------------------------------
 
@@ -152,7 +151,9 @@ INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `role_id`) VALUES
 (1, 'admin', 'admin', '123', 1),
 (2, 'user', 'user', '12345', 2),
 (5, 'ikeng', 'ikeng', '123', 2),
-(7, 'stalin', 'stalin', 'gulag', 2);
+(7, 'stalin', 'stalin', 'gulag', 2),
+(8, 'helmi', 'helmi', 'helmi', 2),
+(9, 'imleh', 'imleh', 'imleh', 1);
 
 --
 -- Indexes for dumped tables
@@ -196,7 +197,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_blogspot`
@@ -220,7 +221,7 @@ ALTER TABLE `tb_pesanan`
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

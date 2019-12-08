@@ -35,7 +35,15 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="<?php echo base_url('registrasi/index') ?>">Belum punya akun? Daftar! gratis.</a>
+                    <h6 class="small">Belum punya akun? Daftar! gratis.</h6>
+                    <button class="btn btn-light form-control"><a href="<?php echo base_url('admin/registrasi_admin/index') ?>">
+                    Mendaftar sebgai penjual
+                    </a></button>
+                    <br>
+                    <br>
+                    <button class="btn btn-light form-control"><a href="<?php echo base_url('registrasi/index') ?>">
+                    Mendafar sebgai pembeli
+                    </a></button>
                   </div>
                 </div>
               </div>

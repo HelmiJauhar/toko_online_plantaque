@@ -17,6 +17,14 @@
             <input type="text" name="kategori" class="form-control" value="<?php echo $brg->kategori?>">
         </div>
         <div class="for-group">
+            <label>Nama Penjual</label>
+            <input type="text" name="nama_penjual" class="form-control" value="<?php echo $brg->nama_penjual?>">
+        </div>
+        <div class="for-group">
+            <label>Lokasi</label>
+            <input type="text" name="lokasi" class="form-control" value="<?php echo $brg->lokasi ?>">
+        </div>
+        <div class="for-group">
             <label >Harga</label>
             <input type="text" name="harga" class="form-control" value="<?php echo $brg->harga?>">
         </div>

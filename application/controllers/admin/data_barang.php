@@ -45,6 +45,8 @@ class Data_barang extends CI_Controller{
                 $gambar = $this->upload->data('file_name');
             }
         }
+        $nama_penjual = $this->input->post('nama_penjual');
+        $lokasi = $this->input->post('lokasi');
 
         $data = array(
             'nama_barang'   => $nama_barang,
@@ -52,7 +54,9 @@ class Data_barang extends CI_Controller{
             'kategori'      => $kategori,
             'harga'         => $harga,
             'stok'          => $stok,
-            'gambar'        => $gambar
+            'gambar'        => $gambar,
+            'nama_penjual'  => $nama_penjual,
+            'lokasi'        => $lokasi
         );
 
         $this->model_barang->tambah_barang($data, 'tb_barang');
@@ -77,13 +81,17 @@ class Data_barang extends CI_Controller{
         $kategori       = $this->input->post('kategori');
         $harga          = $this->input->post('harga');
         $stok           = $this->input->post('stok');
+        $nama_penjual   = $this->input->post('nama_penjual');
+        $lokasi         = $this->input->post('lokasi');
 
         $data = array(
             'nama_barang'   => $nama_barang,
             'keterangan'    => $keterangan,
             'kategori'      => $kategori,
             'harga'         => $harga,
-            'stok'          => $stok
+            'stok'          => $stok,
+            'nama_penjual'  => $nama_penjual,
+            'lokasi'        => $lokasi
         );
 
         $where = array(
