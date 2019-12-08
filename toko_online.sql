@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2019 at 04:00 PM
+-- Generation Time: Dec 08, 2019 at 07:32 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -43,9 +43,10 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `nama_barang`, `keterangan`, `kategori`, `harga`, `stok`, `gambar`) VALUES
-(1, 'Tanaman Anggrek Malang', 'Anggrek rawat 6 bulan asli Malang', 'Tanaman_Hias', 10000, 9, 'anggrek.jpg'),
-(2, 'Kayu Manis', 'Tanaman herbal kayu manis asli Malang', 'Tanaman_Herbal', 2000, 14, 'kayumanis.jpg'),
-(6, 'Tanaman Buah Jeruk', 'Tanaman buah seruk banyuwangi terkenal manis', 'Tanaman_Buah', 15000, 30, '802962077.jpg');
+(7, 'Tanaman Anggrek Malang', 'Anggrek khas malang asli tanam dari awal', 'Tanaman Hias Indoor', 20000, 18, 'anggrek51.jpg'),
+(8, 'Bibit Pohon Cemara', 'Jual bibit pohon cemara untuk ditanam menjadi tanaman hias outdoor', 'Tanaman Hias Outdoor', 50000, 10, '4005313_9350c6bf-9029-4b3f-9998-6e4de9ec56c0.jpg'),
+(9, 'Jual tanaman bambu air', 'asli malang ', 'Tanaman hias outdoor', 35000, 30, 'bambu-air-3.jpg'),
+(10, 'Jual gelombang cinta', 'asli malang', 'Tanaman Hias Indoor', 40000, 34, 'gelombang-cinta.jpg');
 
 -- --------------------------------------------------------
 
@@ -57,15 +58,16 @@ CREATE TABLE `tb_blogspot` (
   `id_deskripsi` int(11) NOT NULL,
   `nama_deskripsi` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
-  `gambar` text NOT NULL
+  `gambar` text NOT NULL,
+  `video_url` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_blogspot`
 --
 
-INSERT INTO `tb_blogspot` (`id_deskripsi`, `nama_deskripsi`, `deskripsi`, `gambar`) VALUES
-(1, 'Cara menanam Anggrek', 'Cara Menanam Anggrek Cara menanam anggrek pada umumnya hampir sama dengan tanaman hias yang lain. Hanya saja ada pengaruh dari beberapa faktor agar tanaman anggrek dapat hidup dan berbunga dengan baik. Berikut beberapa hal yang perlu diperhatikan dalam cara menanam Anggrek:  1. Pemilihan bibit unggul Secara genotip bibit yang baik berasal dari induk yang sehat, rajin berbunga, bunganya banyak dengan warna cerah dan tidak mudah layu. Perbanyakan bibit dapat secara generatif dengan biji atau secara vegetatif melalui pemisahan anakan.     2. Faktor lingkungan Faktor lingkungan sangat berpengaruh terhadap kemampuan tanaman anggrek dalam berbunga. Faktor lingkungan yang sangat berpengaruh pada pertumbuhan dan berbunganya anggrek adalah :     Intensitas Cahaya Intensitas cahaya berpengaruh pada pertumbuhan dan perkembangan anggrek tergantung pada jenis, ukuran dan umur tanaman, biasanya berkisar antara 1500 – 5000 fc.', 'anggrek31.jpg');
+INSERT INTO `tb_blogspot` (`id_deskripsi`, `nama_deskripsi`, `deskripsi`, `gambar`, `video_url`) VALUES
+(11, 'Cara menanam Anggrek', 'kabjdjkbwjkabjdbwjkabdajbwdjbakjdwbwjkbkadw', 'anggrek10.jpg', 'https://www.youtube.com/watch?v=k3dDiLllQzQ');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,8 @@ CREATE TABLE `tb_invoice` (
 INSERT INTO `tb_invoice` (`id`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`) VALUES
 (1, 'michael', 'jl gunung ceneng 1', '2019-11-29 14:39:31', '2019-11-29 14:39:31'),
 (2, 'asd', 'asd', '2019-11-29 14:48:38', '2019-11-29 14:48:38'),
-(3, 'Joseph stalin', 'jl staliningrat 69', '2019-11-30 22:11:05', '2019-11-30 22:11:05');
+(3, 'Joseph stalin', 'jl staliningrat 69', '2019-11-30 22:11:05', '2019-11-30 22:11:05'),
+(4, 'Helmi Jauhar Irsyad', 'Jalan Kapi Janula Raya 15D/5', '2019-12-03 09:31:30', '2019-12-03 09:31:30');
 
 -- --------------------------------------------------------
 
@@ -113,7 +116,8 @@ CREATE TABLE `tb_pesanan` (
 INSERT INTO `tb_pesanan` (`id`, `id_invoice`, `id_barang`, `nama_barang`, `jumlah`, `harga`, `pilihan`) VALUES
 (1, 1, 1, 'Tanaman Anggrek Malang', 1, 10000, ''),
 (2, 2, 2, 'Kayu Manis', 1, 2000, ''),
-(3, 3, 1, 'Tanaman Anggrek Malang', 1, 10000, '');
+(3, 3, 1, 'Tanaman Anggrek Malang', 1, 10000, ''),
+(4, 4, 7, 'Tanaman Anggrek Malang', 2, 20000, '');
 
 --
 -- Triggers `tb_pesanan`
@@ -192,25 +196,25 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tb_blogspot`
 --
 ALTER TABLE `tb_blogspot`
-  MODIFY `id_deskripsi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_deskripsi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_invoice`
 --
 ALTER TABLE `tb_invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_user`
