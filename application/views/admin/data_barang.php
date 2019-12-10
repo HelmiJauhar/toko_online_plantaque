@@ -25,7 +25,6 @@
             <td><?php echo substr($brg->keterangan,0,30) ?>...</td>
             <td><?php echo $brg->nama_penjual ?></td>
             <td><?php echo $brg->lokasi ?></td>
-            <td><?php echo $brg->kategori ?></td>
             <td><?php echo $brg->harga ?></td>
             <td>
               <img src="<?php echo base_url('/uploads/'.$brg->gambar) ?>" width="64">

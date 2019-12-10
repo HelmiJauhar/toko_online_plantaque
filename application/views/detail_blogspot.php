@@ -15,13 +15,13 @@
         <td>Judul Artikel</td>
         <td><strong><?php echo $blog->nama_deskripsi ?></strong></td>
         </tr>
-        <td>Keterangan</td>
-        <td><strong><?php echo $blog->deskripsi ?></strong></td>
-        <tr>
         <td>Video</td>
         <td><strong>
         <?php echo youtube_embed($blog->video_url); ?>
         </strong></td>
+        <tr>
+        <td>Keterangan</td>
+        <td><strong><?php echo $blog->deskripsi ?></strong></td>
         </tr>
         </table>
         </div>

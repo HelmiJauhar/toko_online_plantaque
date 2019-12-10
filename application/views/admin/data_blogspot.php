@@ -18,7 +18,7 @@
         <tr>
             <td><?php echo $no++ ?></td>
             <td><?php echo $blog->nama_deskripsi ?></td>
-            <td><?php echo substr($blog->video_url, 32, 100)  ?></td>
+            <td><?php echo substr($blog->deskripsi, 0, 100)  ?></td>
             <td>
               <img src="<?php echo base_url('/uploads/'.$blog->gambar) ?>" width="64">
             </td>

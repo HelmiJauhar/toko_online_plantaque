@@ -34,6 +34,12 @@
             $this->load->view('admin/detail_invoice', $data);
             $this->load->view('templates_admin/footer');       
         }
+        public function verifikasi($id)
+        {
+        $where = array('id' => $id);
+        $this->model_invoice->verifikasi_data($where, 'tb_invoice');
+        redirect('admin/invoice/index');
+        }
     }
 
 ?>

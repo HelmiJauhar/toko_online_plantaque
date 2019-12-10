@@ -56,5 +56,10 @@
                 return false;
             }
         }
+        public function verifikasi_data($where,$table)
+        {
+            $this->db->where($where);
+            $this->db->delete($table);
+        }
     }
 ?>

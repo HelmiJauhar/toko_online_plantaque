@@ -7,10 +7,16 @@
             <label >Nama Artikel</label>
             <input type="text" name="nama_deskripsi" class="form-control" value="<?php echo $blog->nama_deskripsi?>">
         </div>
+        <br>
         <div class="for-group">
             <label >Artikel</label>
             <input type="hidden" name="id_deskripsi" class="form-control" value="<?php echo $blog->id_deskripsi?>">
             <textarea style="height:200px" name="deskripsi" class="form-control"><?php echo $blog->deskripsi ?></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Video Url (Youtube)</label>
+            <input type="text" name="video_url" class="form-control" value="<?php echo $blog->video_url ?>">
         </div>
         <br>
         <button type="submit" class="btn btn-primary btn-sm">Simpan

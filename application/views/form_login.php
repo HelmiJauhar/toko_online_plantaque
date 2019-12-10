@@ -37,12 +37,12 @@
                   <div class="text-center">
                     <h6 class="small">Belum punya akun? Daftar! gratis.</h6>
                     <button class="btn btn-light form-control"><a href="<?php echo base_url('admin/registrasi_admin/index') ?>">
-                    Mendaftar sebgai penjual
+                    Mendaftar sebagai penjual
                     </a></button>
                     <br>
-                    <br>
+
                     <button class="btn btn-light form-control"><a href="<?php echo base_url('registrasi/index') ?>">
-                    Mendafar sebgai pembeli
+                    Mendafar sebagai pembeli
                     </a></button>
                   </div>
                 </div>
